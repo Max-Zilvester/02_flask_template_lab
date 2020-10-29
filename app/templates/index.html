@@ -27,8 +27,8 @@
 {% for event in events %}
 <div>
     <p>
-{{event.date}}: <b> {{event.name}}: </b>
-{%  }
+{{event.date}}: <b> {{event.name}}: {{event.number_of_guests}}</b>
+{% endfor %}
     </p>
 </div>
 

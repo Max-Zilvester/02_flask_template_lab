@@ -9,7 +9,7 @@ def index():
     return render_template("index.html", title="Home", events=events)
 
 
-@app.route("/add-event", method=["POST"])
+@app.route("/add-event", methods=["POST"])
 def add_event():
     events_date = request.form["date"]
     events_name = request.form["name"]
