@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> My Events Page</h1>
+
+<form action="/add-event" method="post">
+<label for="date">Date</label>
+<input type="text" name="date" id="date">
+
+<label for="name">Name</label>
+<input type="text" name="name" id="name">
+
+<label for="number_of_guests">Number of Guest</label>
+<input type="text" name="number_of_guests" id="number_of_guests">
+
+<label for="room_location">Room Location</label>
+<input type="text" name="room_location" id="room_location">
+
+<label for="description">Description</label>
+<input type="text" name="description" id="description">
+
+<input type="submit" value="Add Event">
+
+</form>
+
+{% for event in events %}
+<div>
+    <p>
+{{event.date}}: <b> {{event.name}}: </b>
+{%  }
+    </p>
+</div>
+
+{% endblock  %}
